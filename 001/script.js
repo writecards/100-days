@@ -32,10 +32,6 @@
  
 
 
-//  let citestr = "*Rob Nixon, Slow Violence";
-//  let citationText = document.getElementById("citation");
-//  citationText.innerHTML = citestr;
-
 document.addEventListener("click", displayText);
 textOnScreen.innerHTML = sentences[0];
 textOnScreen2.innerHTML = sentences2[0];
