@@ -53,9 +53,9 @@ function draw() {
     translate(xPos,yPos);
     line(-lineVal,-lineVal,lineVal,lineVal)
     pop()
-    if(mouseIsPressed === true){
-     stroke(255,0,0)
-    }
+    // if(mouseIsPressed === true){
+    //  stroke(255,0,0)
+    // }
     
   
   }
