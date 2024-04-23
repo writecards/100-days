@@ -53,9 +53,8 @@ function draw() {
     translate(xPos,yPos);
     line(-lineVal,-lineVal,lineVal,lineVal)
     pop()
-    if(mousePressed == true){
-      lineVal++;
-      console.log("pressed")
+    if(mouseIsPressed === true){
+     stroke(255,0,0)
     }
     
   
