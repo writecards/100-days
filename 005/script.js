@@ -17,6 +17,28 @@ let sentences = txt.split("\\");
 //     console.log(rhyme, {numSyllables: 1 })
 //   };
 
+document.addEventListener("click", playSound);
+
+function playSound(){
+    console.log("clicked")
+    const synth = new Tone.Synth().toDestination();
+    synth.triggerAttackRelease("C2", "16n");
+
+    const noise = new Tone.Noise("brown").start();
+    // make an autofilter to shape the noise
+    const autoFilter = new Tone.AutoFilter({
+      frequency: "0n",
+      baseFrequency: 20,
+      octaves: 2,
+      volume: -9,
+      
+    }).toDestination().start();
+    // connect the noise
+    noise.connect(autoFilter);
+    // start the autofilter LFO
+    autoFilter.start();
+   
+}
 window.onload = function(){
     // txt = RiTa.untokenize(words);
     // document.getElementById("text").innerHTML = txt;
@@ -89,5 +111,9 @@ async function nextWord() {
   document.getElementById("text").innerHTML = txt;
 //   
    setTimeout(nextWord,2000);
-  document.getElementById("text").style.color = mycolor;
+   const synth = new Tone.Synth().toDestination();
+   let notes = ["E2", "C2", "D2", "G1"]
+  // synth.triggerAttackRelease("E2", "16n");
+   synth.triggerAttackRelease(notes[randomIntFromInterval(0, notes.length-1)], "16n") 
+  // document.getElementById("text").style.color = mycolor;
 }
