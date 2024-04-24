@@ -50,7 +50,7 @@ a {
 #div5 {
   grid-area: 1 / 5 / 2 / 6;
 }
-.div6 {
+#div6 {
   grid-area: 1 / 6 / 2 / 7;
 }
 .div7 {
