@@ -110,7 +110,7 @@ async function nextWord() {
   console.log(txt)
   document.getElementById("text").innerHTML = txt;
 //   
-   setTimeout(nextWord,2000);
+   setTimeout(nextWord,randomIntFromInterval(200,2000));
    const synth = new Tone.Synth().toDestination();
    let notes = ["E2", "C2", "D2", "G1"]
   // synth.triggerAttackRelease("E2", "16n");
