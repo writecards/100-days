@@ -18,7 +18,7 @@ if(mousedn == true){
 function updateWindowSize(event){
    // console.log(event.clientX);
     outside.style.width = event.clientX + "px";
-    let vol = mapRange(event.clientX, 0, 1400, 1, 0);
+    let vol = mapRange(event.clientX, 0, 1400, 1, 0.4);
     sound.volume = vol;
     console.log(vol);
     if(event.clientX > 1400){
