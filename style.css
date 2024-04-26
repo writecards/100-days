@@ -56,13 +56,13 @@ a {
 #div7 {
   grid-area: 1 / 7 / 2 / 8;
 }
-.div8 {
+#div8 {
   grid-area: 1 / 8 / 2 / 9;
 }
-.div9 {
+#div9 {
   grid-area: 1 / 9 / 2 / 10;
 }
-.div10 {
+#div10 {
   grid-area: 1 / 10 / 2 / 11;
 }
 .div11 {
