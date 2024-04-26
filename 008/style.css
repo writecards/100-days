@@ -1,0 +1,59 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  cursor: pointer;
+  background-color: beige;
+  
+}
+
+.parent{
+position:relative;
+}
+
+#hour {
+    position: absolute;
+  color: green;
+  font-size: 15em;
+  transition: 0.5s;
+  left:200px;
+  top:200px;
+ 
+}
+
+#min {
+    position: absolute;
+  color: blue;
+  font-size: 10em;
+  transition: 0.5s;
+  left:20px;
+  top:20px;
+}
+
+#sec {
+    position: absolute;
+  color: orange;
+  font-size: 5em;
+  transition: 0.5s;
+
+}
+
+#line{
+    position:absolute;
+    width:10px;
+    background-color:red;
+    transition: 0.5s;
+  }  
+
+  #line2{
+    position:absolute;
+    width:4px;
+    background-color:red;
+    transition: 0.5s;
+  }  
+
+  #randCenter{
+    position:absolute;
+    
+  }
