@@ -19,6 +19,7 @@ position:relative;
   transition: 0.5s;
   left:200px;
   top:200px;
+  animation: rotation 360s infinite linear;
  
 }
 
@@ -29,6 +30,7 @@ position:relative;
   transition: 0.5s;
   left:20px;
   top:20px;
+  animation: rotation 60s infinite linear;
 }
 
 #sec {
@@ -36,6 +38,7 @@ position:relative;
   color: orange;
   font-size: 5em;
   transition: 0.5s;
+  animation: rotation 5s infinite linear;
 
 }
 
@@ -57,3 +60,13 @@ position:relative;
     position:absolute;
     
   }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  

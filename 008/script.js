@@ -55,7 +55,8 @@ function startTime() {
     document.getElementById('randCenter').style.left = bodyWidth/2 + "px";
     document.getElementById('randCenter').style.top = bodyHeight/2 + "px";
 
-    setTimeout(startTime,1000);
+    let randInt = randomIntFromInterval(200, 1200);
+    setTimeout(startTime,randInt);
     
     adjustLine(
         document.getElementById('randCenter'), 
