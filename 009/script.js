@@ -1,31 +1,28 @@
  //let str = "Click to Begin. \\ sentence 1 \\ sentence 2 \\ sentence 3 \\ sentence 4 \\ sentence 5 \\ sentence 6 \\ sentence 7 \\ sentence 8 \\ dancing around this heavy feeling \\ and never addressing it\\ and never addressing it\\ and never addressing it\\ and never addressing it\\ and never addressing it\\  and never addressing it \\ and never addressing it \\ and never addressing it"
- let str = "click to begin. \\ 控制 \\  你 \\ 摸 \\ 无数\\ 身体 \\ 地板";
+ let str = "click to begin. \\ 只是 \\  熊 \\ 哭着 \\ 及其\\ 审题 \\ 问";
  //let str = "Click to Begin. \\ First Sentence. \\ Middle Sentence. \\ Last Sentence.";
  let sentences = str.split("\\");
  let textOnScreen = document.getElementById("text1");
  
- let str2 = "click to begin.\\ 玩耍 \\ 在 \\ 空 \\ 中 \\ 薄 \\ 指";
+ let str2 = "click to begin.\\ 知识 \\ 胸 \\ 苦者 \\ 机器 \\ 身体 \\ 纹";
  let sentences2 = str2.split("\\");
  let textOnScreen2 = document.getElementById("text2");
 
- let str3 = "click to begin. \\ 我\\ 漂浮 \\ 在\\ 水 \\ 睡 \\ 中";
+ let str3 = "click to begin. \\ 直视\\ 凶 \\ 裤折\\ 记起 \\ 👼🪜 \\ 闻";
  let sentences3 = str3.split("\\");
  let textOnScreen3 = document.getElementById("text3");
 
- let str4 = "click to begin. \\和  \\醉\\悬 \\ 泪水 \\ 汗 \\ 痛";
+ let str4 = "click to begin. \\芝士 \\兄 \\ 酷者 \\ 集齐 \\ 深梯 \\ 温";
  let sentences4 = str4.split("\\");
  let textOnScreen4 = document.getElementById("text4");
 
- let str5 = "click to begin. \\ 你\\ 光 \\等 \\ 天使 \\ 抱 \\ 你";
+ let str5 = "click to begin. \\ 指使\\ 雄 \\ 枯遮 \\ 几期 \\ 慎剃 \\稳";
  let sentences5 = str5.split("\\");
  let textOnScreen5 = document.getElementById("text5");
 
- let str6 = "click to begin. \\要 \\ 中\\ 一 \\ 安静 \\ 雾 \\ 摔";
+ let str6 = "click to begin. \\知事 \\ 🐻\\ 😭 \\ 库这 \\ 什蹄 \\ 吻";
  let sentences6 = str6.split("\\");
  let textOnScreen6 = document.getElementById("text6");
-
-
-
 
 
  let counter = 0;

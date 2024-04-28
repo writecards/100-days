@@ -1,0 +1,68 @@
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background:black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.parent{
+    width: 100px;
+    height: 300px;
+}
+img{
+    width: 500px;
+}
+.shine_txt{
+    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ 
+ 
+ float:left;
+  color: #ffffff;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background-position: 0;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  
+ 
+  /* Animate to the left */
+  
+
+  /* white-space: nowrap; */
+}
+    
+@keyframes shine {
+  0%{
+    background-position: 0;
+  }
+  60%{
+    background-position: top 300px left 280px;
+  }
+  100%{
+    background-position: top 820px left 520px;
+  }
+  /* 0%, 10% {
+    background-position: -1000px;
+}
+20% {
+    background-position: top left;
+}
+90% {
+    background-position: top right;
+}
+100% {
+    background-position: 1000px;
+} */
+}
+
