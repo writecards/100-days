@@ -16,7 +16,7 @@
 .gallery{
     position: relative;
     top: 25rem;
-    width: 15rem;
+    width: 25rem;
     transform-style: preserve-3d;
     transform: perspective(2000px) rotate3d(-.5, 1, 0, 0deg);
     animation: circular-rotate 60s linear infinite;
