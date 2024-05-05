@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: freeSans;
+  src: url(FreeSans.ttf);
+}
+html,
+body {
+  overscroll-behavior: none;
+  font-family: freeSans;
+    /* background-image: url("spider.png");
+    background-size: 900px 900px;
+    background-repeat: no-repeat; */
+    background-color: black;
+}
+
+.p5-sketch{
+  position: absolute;
+  left: 100px;
+}
+.parent {
+  position: absolute;
+  left: 57%;
+  top: 22%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  
+}
+
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  /* background-image: url("img.JPG");
+  background-size: 100px 100px; */
+  
+ 
+ 
+}
+
+.div2 {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  /* background-image: url("img.JPG");
+  background-size: 100px 100px; */
+}
+.div3 {
+  grid-area: 4 / 2 / 5 / 3;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  /* background-image: url("img.JPG");
+  background-size: 100px 100px; */
+}
+.div4 {
+  grid-area: 3 / 3 / 4 / 4;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  /* background-image: url("img.JPG");
+  background-size: 100px 100px; */
+}
+.div5 {
+  grid-area: 4 / 4 / 5 / 5;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  /* background-image: url("img.JPG");
+  background-size: 100px 100px; */
+}
+.div6 {
+  grid-area: 2 / 4 / 3 / 5;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  /* background-image: url("img.JPG");
+  background-size: 100px 100px; */
+}
+
+
+.div7 {
+  grid-area: 5 / 5 / 6 / 6;
+  width: 100px;
+  height: 100px;
+  border: 4px dotted black;
+  text-align: left;
+
+}
+
+p {
+  line-height: 100px;
+  vertical-align: middle;
+  transition: all 10s;
+    font-size: 10pt;
+    color: white;
+}
+
+p:hover{
+  
+  
+}
