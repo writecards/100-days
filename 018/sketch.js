@@ -58,9 +58,9 @@ class FlowField {
     }
   }
 
-//   update() {
-//    
-//   }
+  update() {
+   
+  }
 
   lookup(position) {
     let column = constrain(floor(position.x / this.resolution), 0, this.cols - 1);
@@ -88,6 +88,8 @@ class Particle {
     this.acc.mult(0);
   }
 
+  
+
   applyForce(force) {
     this.acc.add(force);
   }
@@ -106,7 +108,7 @@ class Particle {
     rotate(this.vel.heading());
     imageMode(CENTER);
    
-    image(this.icon, 0, 0, this.randomSize, this.randomSize); 
+    image(this.icon, 0, 0, this.randomSize, this.randomSize); // Adjust size as needed
     pop();
     
   }
