@@ -7,7 +7,8 @@ let iconImages = [];
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
-    iconImages.push(loadImage('img/' + i + '.png')); // Load your icon images
+   // iconImages.push(loadImage('img/' + i + '.png')); // Load your icon images
+   iconImages.push(loadImage('img/7.png')); // Load your icon images
   }
 }
 
@@ -23,7 +24,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255,0);
   flowField.update();
   for (let particle of particles) {
     particle.follow(flowField);
@@ -43,8 +44,8 @@ class FlowField {
   }
 
   init() {
-    // noiseSeed(random(99));
-    noiseSeed(frameCount * 0.1); // Change seed for animation
+    noiseSeed(random(99));
+   // noiseSeed(frameCount * 0.1); // Change seed for animation
     let xoff = 0;
     for (let i = 0; i < this.cols; i++) {
       let yoff = 0;
@@ -80,7 +81,7 @@ class Particle {
     this.maxspeed = 2;
     this.maxforce = 0.2; // 0.05
     this.icon = random(iconImages);
-    this.randomSize = random(20,100);
+    this.randomSize = random(50,100);
   }
 
   update() {
