@@ -1,19 +1,17 @@
-
-
 let flowField;
 let particles = [];
-let numParticles = 200;
+let numParticles = 100;
 let iconImages = [];
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
-    iconImages.push(loadImage('img/' + i + '.png')); // Load your icon images
+    iconImages.push(loadImage("img/" + i + ".png")); // Load your icon images
   }
 }
 
 function setup() {
- createCanvas(window.innerWidth, window.innerHeight);
-  //createCanvas(1500, 2000);
+ // createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(2338,3306); //3508 x 4960
   flowField = new FlowField(20); // Size of each flow field cell
   for (let i = 0; i < numParticles; i++) {
     let x = random(width);
@@ -43,8 +41,8 @@ class FlowField {
   }
 
   init() {
-    // noiseSeed(random(99));
-    noiseSeed(frameCount * 0.1); // Change seed for animation
+     noiseSeed(floor(random(99)));
+    //noiseSeed(frameCount * 0.1); // Change seed for animation
     let xoff = 0;
     for (let i = 0; i < this.cols; i++) {
       let yoff = 0;
@@ -60,12 +58,14 @@ class FlowField {
     }
   }
 
-  update() {
-   
-  }
+  update() {}
 
   lookup(position) {
-    let column = constrain(floor(position.x / this.resolution), 0, this.cols - 1);
+    let column = constrain(
+      floor(position.x / this.resolution),
+      0,
+      this.cols - 1
+    );
     let row = constrain(floor(position.y / this.resolution), 0, this.rows - 1);
     let index = column + row * this.cols;
     return this.field[index].copy();
@@ -77,20 +77,46 @@ class Particle {
     this.pos = createVector(x, y);
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
-    this.maxspeed = 2;
+    this.maxspeed =5;
     this.maxforce = 0.2; // 0.05
     this.icon = random(iconImages);
-    this.randomSize = random(20,100);
+    this.randomSize = random(100, 400);
   }
 
   update() {
     this.vel.add(this.acc);
     this.vel.limit(this.maxspeed);
     this.pos.add(this.vel);
-    this.acc.mult(0);
-  }
+    //this.acc.mult(0);
+    let pad = 200
 
-  
+    if (this.pos.x > width-pad) {
+        this.pos.sub(this.vel);
+      }
+      if (this.pos.x < pad) {
+        this.pos.sub(this.vel);
+      }
+      if (this.pos.y > height-pad) {
+        this.pos.sub(this.vel);
+      }
+      if (this.pos.y < pad) {
+        this.pos.sub(this.vel);
+      }
+    // if (this.pos.x > width) {
+    //   this.vel.x *= -1;
+    // }
+    // if (this.pos.x < 0) {
+    //   this.vel.x *= -1;
+    // }
+    // if (this.pos.y > height) {
+    //   this.vel.y *= -1;
+    // }
+    // if (this.pos.y < 0) {
+    //   this.vel.y *= -1;
+    // }
+
+
+  }
 
   applyForce(force) {
     this.acc.add(force);
@@ -109,17 +135,34 @@ class Particle {
     translate(this.pos.x, this.pos.y);
     rotate(this.vel.heading());
     imageMode(CENTER);
-   
+
     image(this.icon, 0, 0, this.randomSize, this.randomSize); // Adjust size as needed
     pop();
-    
   }
 
-  edges(){
-    if (this.pos.x > width ) this.pos.x = 0;
-    if (this.pos.x < 0 ) this.pos.x = width;
-    if (this.pos.y > height ) this.pos.y = 0;
-    if (this.pos.y < 0 ) this.pos.y = height;
+  edges() {
+    // if (this.pos.x > width ) this.pos.x = 0;
+    // if (this.pos.x < 0 ) this.pos.x = width;
+    // if (this.pos.y > height ) this.pos.y = 0;
+    // if (this.pos.y < 0 ) this.pos.y = height;
   }
 
+  // edges(){
+  //     if (this.pos.x > width ){
+  //         this.force *= -1;
+  //                 this.update();
+  //     }
+  //     if (this.pos.x < 0 ){
+  //         this.force *= -1;
+  //         this.update();
+  //     }
+  //     if (this.pos.y > height ) {
+  //         this.force *= -1;
+  //         this.update();
+  //     }
+  //     if (this.pos.y < 0 ) {
+  //         this.force *= -1;
+  //         this.update();
+  //     }
+  //   }
 }
