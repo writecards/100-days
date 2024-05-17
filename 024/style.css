@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+    background-color: rgb(255, 0, 0);
+}
+
+.text{
+    width: 100vw;
+ 
+    position: absolute;
+    color:yellow;
+    font-size: 50vh;
+    text-align: center;
+}
+
+.container{
+    top: 8%;
+    position: absolute;
+    left: auto;
+    text-align: center;
+}
