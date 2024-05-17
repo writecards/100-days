@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+     
+}
+
+#basket{
+
+    
+    position: absolute;
+  
+  color: #2196F3;
+  left: 27%;
+  top: 15%;
+}
+
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+  
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+  }
+
+  #smiley{
+    width: 300px;
+  
+  }
+  #thankyou{
+    display: none;
+    color: black;
+    position: absolute;
+    top: 72%;
+    left: 35%;
+  }
+  #thx{
+    position: absolute;
+    left: 200px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 300px;
+  }
