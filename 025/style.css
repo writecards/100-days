@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+     background-image: url("clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.container{
+    margin: auto;
+    position: absolute;
+    left: 10%;
+  
+    width: 50vw;
+}
+.title{
+  
+        position: relative;
+        left: 0%;
+        background: red;
+        background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+        background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+        background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 4em;
+       
+
+}
+p{
+    box-shadow: 0 18px 42px 0 rgba(47, 47, 41, 0.452);
+    color: white;
+    background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.movies{
+    left: 5%;
+    width: 47.5vw;
+    position: relative;
+   
+    /* background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); */
+     /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  */
+    font-size: 1em;
+  
+}
+
+
+
+p:hover{
+    font-size:1.2em;
+    transition: all 200ms;
+    font-size-adjust: 20px;
+}
