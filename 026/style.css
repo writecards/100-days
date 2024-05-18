@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+    overflow: hidden;
+    background-color: rgb(5, 15, 30);
+    background-image: url("rain.gif");
+ 
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+p{
+    box-shadow: inset 5em 1em 1em  green;
+    color: white;
+}
+
+.parent {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 200px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 2 / 2 / 3; }
+    .div2 { grid-area: 2 / 3 / 3 / 4; }
+    .div3 { grid-area: 3 / 3 / 4 / 4; }
+    .div4 { grid-area: 4 / 2 / 5 / 3; }
+    .div5 { grid-area: 2 / 5 / 3 / 6; }
+    .div6 { grid-area: 1 / 4 / 2 / 5; }
+    .div7 { grid-area: 4 / 4 / 5 / 5; }
+
+    img{
+        width: 150px;
+    }
