@@ -47,7 +47,7 @@ flex-wrap: wrap;
     font-weight: 900;
     color: rgb(255,255,255, 0.05);
     line-height: 0.9em;
-    transition: 1s;
+    transition: 3s;
     user-select: none;
 }
 
