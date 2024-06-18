@@ -17,7 +17,7 @@
 html, body{
     overscroll-behavior: none;
     font-family: source;
-    background-image: url('bush.jpg');
+    background-image: url('bush.JPG');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
