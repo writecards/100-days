@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>029</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+    <svg>
+        <filter id = "gooey">
+            <feGaussianBlur in = "SourceGraphic" stdDeviation = "10"/>
+            <feColorMatrix values = "
+                                    1 0 0 0 0
+                                    0 1 0 0 0
+                                    0 0 1 0 0
+                                    0 0 0 30 -10
+                                    "/>
+        </filter>
+    </svg>
+    <div class="circle"></div>
+    <script src = "script.js"></script>
+</body>
+</html>

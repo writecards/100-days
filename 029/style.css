@@ -10,7 +10,52 @@
     src: url(FreeSans.ttf);
 
 }
-html, body{
+body{
     overscroll-behavior: none;
     font-family: freeSans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:rgb(11, 4, 69);
+    filter: url(#gooey)
+}
+
+.circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /* background:linear-gradient(90deg, pink, lightgreen); */
+    background:linear-gradient(90deg, rgb(249, 249, 249), rgb(119, 244, 255));
+    border-radius: 50%;
+    cursor:pointer;
+
+
+}
+
+.particles{
+    position: absolute;
+ 
+    border-radius:50%;
+    /* background:linear-gradient(90deg, pink, lightgreen); */
+
+    background:linear-gradient(90deg, rgb(249, 249, 249), rgb(119, 244, 255));
+    animation: animate 2s ease infinite;
+    z-index: -1;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(0,0);
+
+    }
+    50%{
+        transform: translate(var(--x), var(--y));
+    }
+    
+}
+
+svg{
+    width: 0;
+    height: 0;
 }
