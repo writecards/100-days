@@ -17,7 +17,12 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:rgb(11, 4, 69);
+    /* background:rgb(11, 4, 69); */
+    background: rgb(0,0,0);
+background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(115,115,115,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(115,115,115,1) 100%);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(115,115,115,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#737373",GradientType=1);
     filter: url(#gooey)
 }
 

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600vh;
+}
+
+.box{
+    font-size: 2em;
+    position: fixed;
+    top: 50%;
+    line-height: 70%;
+    transform: translateY(-50%);
+    padding: 3%;
+}
+
+p{
+color: rgb(161, 159, 159);
+}
+
+p span{
+   position: relative;
+   color: rgb(232, 232, 232);
+   font-size: 2.5em;
+   transition: 0.25s;
+}
+
+p span.active{
+    color: greenyellow;
+    text-shadow: 
+    0 0 40px rgb(89, 0, 255),
+    0 0 80px rgb(255, 0, 242),
+    0 0 160px rgb(0, 229, 255);
+    /* z-index: 1000; */
+}
