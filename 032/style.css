@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    background:#000;
+    overscroll-behavior: none;
+    font-family: freeSans;
+    overflow: hidden;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('city.gif');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    
+     /* background-image: linear-gradient(to right,#333 0.5px, transparent 0.5px), linear-gradient(to bottom, black 0.5px, transparent 0.5px);
+    background-size: 4vh 4vh; */
+
+
+}
+
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.cursor .text{
+    position: absolute;
+    font-size: 2em;
+    color:yellow;
+    text-shadow: 0 0 10px rgb(212, 255, 0), 
+    0 0 20px #0f0,
+ 
+    0 0 90px rgb(0, 229, 255);
+    transform: translate(-50%, -50%);
+
+}
