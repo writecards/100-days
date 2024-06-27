@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+html, body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+#container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+   perspective: 1000px;
+}
+
+#container span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(tubself.png);
+    /* background-repeat:no-repeat; */
+    background-repeat: repeat-x;
+    background-size:cover;
+    transition: 0.3s;
+    z-index: calc(1 + var(--i));
+
+}
+
+#container:hover span{
+    background: url(tubself3.png);
+    /* background-repeat:no-repeat; */
+    background-repeat: repeat-x;
+    background-size:cover;
+    transition: 0.3s ease-out;
+    z-index: calc(1 + var(--i));
+    /* transform: rotate(-30deg) skew(25deg) translateX(calc(1.5px*var(--i))) translateY(calc(-1.5px)*var(--i)); */
+
+    transform:  rotate(30deg) skew(-25deg) translateX(calc(5px*var(--i))) translateY(calc(-5px*var(--i)));
+    /* box-shadow: -5px 5px 0 rgba(0,0,0,0.05); */
+}
+
+/* #container:hover span:last-child{
+    box-shadow: -50px 50px 0 rgba(0,0,0,0.05);
+} */
