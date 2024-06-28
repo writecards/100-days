@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: freeSans;
+    src: url(FreeSans.ttf);
+
+}
+ body{
+    overscroll-behavior: none;
+    font-family: freeSans;
+    overflow: hidden;
+
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(6, 0, 193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    width: 170px;
+    height: 400px;
+    /* background-color:rgb(208,166,135); */
+    background-color:rgba(27, 26, 26, 2);
+    border-color: aliceblue;
+    filter: url(#gooey);
+   
+    background-repeat: no-repeat;
+    background-size:50%;
+    background-position: center;
+    border-radius: 20%;
+ transition: 0.5s ease;
+   
+    
+}
+#mouth{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    
+    
+}
+
+h2{
+    position: absolute;
+    font-size: 6em;
+    top: 0%;
+    
+    color: rgb(204, 7, 53);
+    text-shadow: 0 0 10px rgb(212, 255, 0), 
+    0 0 20px rgb(221, 255, 0),
+    0 0 40px rgb(89, 0, 255),
+    0 0 80px rgb(255, 0, 242),
+    0 0 160px rgb(0, 229, 255);
+    animation-name: bounce;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+
+}
+
+@keyframes bounce{
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+
+}
+.drops{
+    position: absolute;
+    top: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background-color:deeppink;
+    background: rgb(131,58,180);
+    background: -moz-radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+    border-radius: 50%;
+    z-index: 100;
+    animation: animate 5s ease-in-out forwards;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateX(-50%) translateY(calc(-60vh - 100%));
+    }
+    25%{
+        transform: translateX(-50%) translateY(-100%);
+    }
+    50%{
+        transform: translateX(-50%) translateY(0);
+    }
+    75%{
+        transform: translateX(-50%) translateY(-100%);
+    }
+    100%{
+        transform: translateX(-50%) translateY(calc(50vh - 100%));
+    }
+}
+
+/* svg{
+    width: 0;
+    height: 0;
+} */
