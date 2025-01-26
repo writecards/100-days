@@ -2,6 +2,7 @@
 
 let imgUrl = "durian.jpg";
 let img;
+let backgroundimg;
 let particles = [];
 let ratio, l, h;
 
@@ -13,6 +14,7 @@ const FORCE_VAL = 120;
 
 function preload() {
   img = loadImage(imgUrl);
+  backgroundimg = loadImage("illusionhd.jpg");
 }
 
 function setup() {
@@ -27,12 +29,14 @@ function setup() {
     l = h * ratio;
   }
   imageMode(CENTER);
+
   image(img, windowWidth / 2, windowHeight / 2, l, h);
   createParticles();
 }
 
 function draw() {
   background(30);
+  image(backgroundimg, windowWidth / 2, windowHeight / 2, l, h);
 
   push();
   fill(0, 255, 0);
