@@ -3,9 +3,10 @@
 let imgUrl = "durian.jpg";
 let img;
 let particles = [];
+let ratio, l, h;
 
-const particleSize = 10;
-const RESOLUTION = 8;
+let particleSize = 15;
+let res = 15;
 const MAX_FORCE = 10;
 const MIN_FORCE = 0;
 const FORCE_VAL = 120;
@@ -16,12 +17,23 @@ function preload() {
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  image(img, 0, 0, windowWidth, windowHeight);
+  ratio = 1920 / 1080;
+
+  if (windowWidth / windowHeight > ratio) {
+    l = windowWidth;
+    h = l / ratio;
+  } else {
+    h = windowHeight;
+    l = h * ratio;
+  }
+  imageMode(CENTER);
+  image(img, windowWidth / 2, windowHeight / 2, l, h);
   createParticles();
 }
 
 function draw() {
   background(30);
+
   push();
   fill(0, 255, 0);
   text("what does it mean to archive?", 200, 200);
@@ -37,15 +49,30 @@ function draw() {
   });
 }
 
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-//   image(img, 0, 0, width, height);
-//   //image(img, 0, 0, windowWidth, windowHeight);
-// }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  ratio = 1920 / 1080;
+
+  if (windowWidth / windowHeight > ratio) {
+    l = windowWidth;
+    h = l / ratio;
+    //console.log("a");
+  } else {
+    h = windowHeight;
+    l = h * ratio;
+  }
+  imageMode(CENTER);
+  image(img, windowWidth / 2, windowHeight / 2, l, h);
+  createParticles();
+  particles.forEach((particle) => {
+    particle.update();
+    particle.draw();
+  });
+}
 
 function createParticles() {
-  for (i = 0; i < width; i += RESOLUTION) {
-    for (let j = 0; j < height; j += RESOLUTION) {
+  for (i = 0; i < l; i += res) {
+    for (let j = 0; j < h; j += res) {
       let x = (i / width) * img.width;
       let y = (j / height) * img.height;
       const color = img.get(x, y);
@@ -112,6 +139,7 @@ class Particle {
   draw() {
     fill(this.color);
     noStroke();
+    stroke(this.color);
 
     rectMode(CENTER);
     rect(this.x, this.y, particleSize);
