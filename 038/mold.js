@@ -7,14 +7,23 @@ class Mold {
     this.heading = random(0, 360);
     this.vx = cos(this.heading);
     this.vy = sin(this.heading);
-    this.rotAngle = 45;
+    this.rotAngle = 10;
 
     this.rSensorPos = createVector(0, 0);
     this.lSensorPos = createVector(0, 0);
     this.fSensorPos = createVector(0, 0);
 
-    this.sensorAngle = 45;
-    this.sensorDist = 10;
+    this.sensorAngle = 25;
+    this.sensorDist = 20;
+
+    this.h = 359;
+    this.hueChange = -1;
+
+    this.s = 359;
+    this.satChange = -10;
+
+    this.b = 359;
+    this.briChange = -1;
   }
 
   update() {
@@ -57,7 +66,25 @@ class Mold {
 
   display() {
     noStroke();
-    fill(255);
+    this.h += this.hueChange;
+
+    if (this.h < 1) {
+      this.h = 360;
+    }
+    // this.s += this.satChange;
+
+    // if (this.s < 1) {
+    //   this.s = 255;
+    // }
+    // this.b += this.briChange;
+
+    // if (this.b < 1) {
+    //   this.b = 255;
+    // }
+
+    fill(this.h, 360, 200, 10);
+
+    // fill(255, 20);
     ellipse(this.x, this.y, this.r * 2, this.r * 2);
     //     line(
     //       this.x,

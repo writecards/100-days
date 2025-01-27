@@ -13,4 +13,5 @@
 html, body{
     overscroll-behavior: none;
     font-family: freeSans;
+    background-color: black;
 }

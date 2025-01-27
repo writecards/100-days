@@ -1,6 +1,6 @@
 //following https://www.youtube.com/watch?v=_gz8FMduwRc&list=PLxl8HNCwRbBT1bxgMRlGyxB7wjOmPF0zv&index=9&ab_channel=WebBae
-
 let imgUrl = "durian.jpg";
+
 let img;
 let backgroundimg;
 let particles = [];
@@ -36,7 +36,7 @@ function setup() {
 
 function draw() {
   background(30);
-  image(backgroundimg, windowWidth / 2, windowHeight / 2, l, h);
+  // image(backgroundimg, windowWidth / 2, windowHeight / 2, l, h);
 
   push();
   fill(0, 255, 0);
