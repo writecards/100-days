@@ -15,7 +15,7 @@ function setup() {
 
   angleMode(DEGREES);
   //image(img, 0, 0, window.innerWidth, window.innerHeight);
-  background(0);
+  background(0, 50);
 
   colorMode(HSB, 360, 100, 100, 100);
   for (let i = 0; i < num; i++) {

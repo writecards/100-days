@@ -14,7 +14,7 @@ class Mold {
     this.fSensorPos = createVector(0, 0);
 
     this.sensorAngle = 25;
-    this.sensorDist = 20;
+    this.sensorDist = 5;
 
     this.h = 359;
     this.hueChange = -1;
