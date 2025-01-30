@@ -16,10 +16,10 @@ class Pendulum {
   update() {
     if (this.collison()) {
       this.nc = color(255);
-      this.osc.amp(1, 0.05);
+      this.osc.amp(1, 0.07);
     } else {
       this.nc = this.c;
-      this.osc.amp(0, 0.05);
+      this.osc.amp(0, 0.07);
     }
     this.angleA = (-gravity / this.length) * sin(this.angle);
     this.angleV += this.angleA;
