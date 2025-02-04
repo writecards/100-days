@@ -8,9 +8,9 @@ let c = ["#0F5FA6", "#034001", "#B9BF04", "#F27405", "#F22816"];
 let osc;
 
 //let midiNotes = [55, 52, 48, 45, 40, 43, 40, 36, 33, 30];
-//let midiNotes = [44];
+let midiNotes = [44];
 
-let midiNotes = [91, 88, 84, 79, 76, 72, 67, 64, 60, 55, 52, 48, 43, 40, 36];
+//let midiNotes = [91, 88, 84, 79, 76, 72, 67, 64, 60, 55, 52, 48, 43, 40, 36];
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
