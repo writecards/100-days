@@ -10,17 +10,37 @@ class Ball {
 
   update() {
     if (this.collision(0)) {
-      this.note.play();
+      // fill(255);
+      // <<<<<<<<
+      //this.note.play();
     }
-    this.angle += this.angleV;
+    //this.angle += this.angleV;
   }
 
   display() {
     push();
-    this.x = r * cos(this.startingAngle + this.angle + this.shiftingAngle);
+    //this.x = r * sin(this.startingAngle + this.angle + this.shiftingAngle);
     rotate(-this.shiftingAngle);
+    let angle = map(mouseX, 100, 400, 0, 360);
+    let xval = r * cos(angle);
+    let yval = r * sin(angle);
+
     //line(-r, 0, r, 0);
-    ellipse(this.x, 0, 20, 20);
+    textAlign(CENTER, CENTER);
+
+    text("酷", xval, yval - 45, 20, 20);
+    text("儿", xval, yval - 30, 20, 20);
+    text("没", xval, yval - 15, 20, 20);
+    text("有", xval, yval, 20, 20);
+    text("未", xval, yval + 15, 20, 20);
+    text("来", xval, yval + 30, 20, 20);
+    // text("酷", this.x, -45, 20, 20);
+    // text("儿", this.x, -30, 20, 20);
+    // text("没", this.x, -15, 20, 20);
+    // text("有", this.x, 0, 20, 20);
+    // text("未", this.x, 15, 20, 20);
+    // text("来", this.x, 30, 20, 20);
+    // ellipse(this.x, 0, 20, 20);
     pop();
   }
 
