@@ -119,9 +119,9 @@ function draw() {
     stroke(255, 179, 255, 99);
     balls[i].update();
     balls[i].display();
-    stroke(156, 200, 219, 99);
-    balls2[i].update();
-    balls2[i].display();
+    // stroke(156, 200, 219, 99);
+    // balls2[i].update();
+    // balls2[i].display();
     // stroke(140, 235, 52, 99);
     // balls3[i].update();
     // balls3[i].display();

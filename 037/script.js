@@ -14,7 +14,6 @@ const FORCE_VAL = 120;
 
 function preload() {
   img = loadImage(imgUrl);
-  backgroundimg = loadImage("illusionhd.jpg");
 }
 
 function setup() {
@@ -36,7 +35,6 @@ function setup() {
 
 function draw() {
   background(30);
-  // image(backgroundimg, windowWidth / 2, windowHeight / 2, l, h);
 
   push();
   fill(0, 255, 0);
